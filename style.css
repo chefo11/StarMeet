@@ -635,6 +635,7 @@ main .container .left .profile{
         top: 1.3rem;
         left: calc(20rem - 0.6rem);
         display: block;
+        
     }
     
     main .container .middle {
