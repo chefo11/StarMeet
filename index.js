@@ -6,6 +6,10 @@ const messages = document.querySelector(".messages");
 const message = messages.querySelectorAll(".message");
 const messageSearch = document.querySelector("#message-search");
 
+//Theme
+const theme = document.querySelector("#theme");
+const themeModal = document.querySelector(".customize-theme");
+
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     //remove active class from all menu items
@@ -51,4 +55,21 @@ messagesNotification.addEventListener("click", () => {
   }, 2000);
 });
 
-//Theme customization
+//Theme and display customization
+//open modal
+const openThemeModal = () => {
+  themeModal.style.display = "grid";
+};
+
+//close modal
+const closeThemeModal = (e) => {
+  if (e.target.classList.contains("customize-theme")) {
+    themeModal.style.display = "none";
+  }
+};
+
+//close modal eventlistener
+themeModal.addEventListener("click", closeThemeModal);
+
+//open Modal eventlistener
+theme.addEventListener("click", openThemeModal);

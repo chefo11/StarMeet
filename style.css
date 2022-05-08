@@ -479,6 +479,7 @@ main .container .left .profile{
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 .customize-theme .font-size{
     margin-top: 5rem;
@@ -609,7 +610,11 @@ main .container .left .profile{
     .left .btn{
         display: none;
     }
+    .customize-theme .card{
+        width: 80vw;
+    }
 }
+/*media queries for smaller screens like small tablets and phones*/
 @media screen and (max-width:992px) {
     nav .search-bar{
         display: none;
@@ -643,5 +648,8 @@ main .container .left .profile{
     }
     main .container .right{
         display: none;
+    }
+    .customize-theme .card{
+        width: 90vw;
     }
 }
