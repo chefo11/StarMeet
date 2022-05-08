@@ -162,13 +162,15 @@ const changeBG = () => {
 
 //theme background selector
 Bg1.addEventListener("click", () => {
+  darkColorLightness = "17%";
+  whiteColorLightness = "100%";
+  lightColorLightness = "95%";
   //add active class
   Bg1.classList.add("active");
   //remove active class from others
   Bg2.classList.remove("active");
   Bg3.classList.remove("active");
-  //remove customized changes from local storage
-  window.location.reload();
+  changeBG();
 });
 Bg2.addEventListener("click", () => {
   darkColorLightness = "95%";
